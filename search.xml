@@ -3,11 +3,23 @@
   
     
     <entry>
-      <title>Hello World</title>
-      <link href="/2018/09/05/hello-world/"/>
-      <url>/2018/09/05/hello-world/</url>
-      <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+      <title>Jmeter常见性能指标</title>
+      <link href="/2018/09/06/Jmeter%E5%B8%B8%E8%A7%81%E6%80%A7%E8%83%BD%E6%8C%87%E6%A0%87/"/>
+      <url>/2018/09/06/Jmeter%E5%B8%B8%E8%A7%81%E6%80%A7%E8%83%BD%E6%8C%87%E6%A0%87/</url>
+      <content type="html"><![CDATA[<p>在实际工作中我们经常会对两种架构的软件进行测试：B/S和C/S，它们关注的指标有哪些区别？</p><p><strong>1、对于B/S架构的软件，一般会关注如下Web服务器性能指标：</strong></p><ul><li>Avg Rps：平均每秒钟的响应次数=总请求次数/秒数；</li><li>Avg time to last byte per terstion （mstes）:平均每秒业务脚本的迭代次数；</li><li>Successful Hits：成功的点击次数；</li><li>Failed Hits：失败的点击次数；</li><li>Hits Per Second：每秒点击次数；</li><li>Successful Hits Per Second：每秒成功的点击次数；</li><li>Failed Hits Per Second：每秒失败的点击次数；</li><li>Attempted Connections：尝试连接数；</li><li>Throughput：吞吐率；</li></ul><p><strong>2、对于C/S架构的程序，由于软件后台通常为数据库，所以我们更注重数据库的测试指标。</strong></p><ul><li>User Connections：用户连接数，也就是数据库的连接数量；</li><li>Number of Deadlocks：数据库死锁；</li><li>Butter Cache Hit：数据库Cache的命中情况。</li></ul><p><em>注：在实际性能测试过程中，需要观察的性能指标并不限于以上提到的这些指标，需要根据实际情况作出选择和权衡，有些指标如CPU占用率、内存占用率、数据库连接池等，也有非常重要的参考意义。</em></p>]]></content>
       
+      <categories>
+          
+          <category> tech </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Jmeter </tag>
+            
+        </tags>
       
     </entry>
     

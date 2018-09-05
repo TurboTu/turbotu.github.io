@@ -1,0 +1,79 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description"><title>Jmeter常见性能指标 | TurboTu</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.1"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/8.0.0/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/1.0.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/1.0.0/grids-responsive-min.css"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = 'https://hm.baidu.com/hm.js?' + '41fc030db57d5570dd22f78997dc4a7e';
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+  })();
+  </script></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">Jmeter常见性能指标</h1><a id="logo" href="/.">TurboTu</a><p class="description">大道至简，徐徐图之</p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a><a href="/timeline/"><i class="fa fa-calendar"> 时间线</i></a><a href="/guestbook/"><i class="fa fa-comments"> 留言</i></a><a href="/atom.xml"><i class="fa fa-rss"> 订阅</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">Jmeter常见性能指标</h1><div class="post-meta">Sep 6, 2018<span> | </span><span class="category"><a href="/categories/tech/">tech</a></span><span class="post-time"><span class="post-meta-item-text"> | </span><span class="post-meta-item-icon"><i class="fa fa-keyboard-o"></i><span class="post-count"> 323</span><span class="post-meta-item-text"> 字</span></span></span><span class="post-time"> | <span class="post-meta-item-icon"><i class="fa fa-hourglass-half"></i><span class="post-count"> 1</span><span class="post-meta-item-text"> 分钟</span></span></span></div><a class="disqus-comment-count" data-disqus-identifier="2018/09/06/Jmeter常见性能指标/" href="/2018/09/06/Jmeter常见性能指标/#disqus_thread"></a><div class="post-content"><p>在实际工作中我们经常会对两种架构的软件进行测试：B/S和C/S，它们关注的指标有哪些区别？</p>
+<p><strong>1、对于B/S架构的软件，一般会关注如下Web服务器性能指标：</strong></p>
+<ul>
+<li>Avg Rps：平均每秒钟的响应次数=总请求次数/秒数；</li>
+<li>Avg time to last byte per terstion （mstes）:平均每秒业务脚本的迭代次数；</li>
+<li>Successful Hits：成功的点击次数；</li>
+<li>Failed Hits：失败的点击次数；</li>
+<li>Hits Per Second：每秒点击次数；</li>
+<li>Successful Hits Per Second：每秒成功的点击次数；</li>
+<li>Failed Hits Per Second：每秒失败的点击次数；</li>
+<li>Attempted Connections：尝试连接数；</li>
+<li>Throughput：吞吐率；</li>
+</ul>
+<p><strong>2、对于C/S架构的程序，由于软件后台通常为数据库，所以我们更注重数据库的测试指标。</strong></p>
+<ul>
+<li>User Connections：用户连接数，也就是数据库的连接数量；</li>
+<li>Number of Deadlocks：数据库死锁；</li>
+<li>Butter Cache Hit：数据库Cache的命中情况。</li>
+</ul>
+<p><em>注：在实际性能测试过程中，需要观察的性能指标并不限于以上提到的这些指标，需要根据实际情况作出选择和权衡，有些指标如CPU占用率、内存占用率、数据库连接池等，也有非常重要的参考意义。</em></p>
+</div><div><ul class="post-copyright"><li class="post-copyright-author"><strong>本文作者：</strong>TurboTu</li><li class="post-copyright-link"><strong>本文链接：</strong><a href="/2018/09/06/Jmeter常见性能指标/">https://turbotu.github.io/2018/09/06/Jmeter常见性能指标/</a></li><li class="post-copyright-license"><strong>版权声明：</strong>copyright@TurboTu</li></ul></div><br><script type="text/javascript" src="/js/share.js?v=0.0.1" async></script><a class="article-share-link" data-url="https://turbotu.github.io/2018/09/06/Jmeter常见性能指标/" data-id="cjlpdbhj70000rre1xa4o6xr5" data-qrcode="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACIElEQVR42u3aMXLdMAwFQN//0kqbmUT0AyAVIpeV59tf5KqAAQI/P/G6/lr/frL+7fqZ610eXhgYGJ9lXMu1Ztwd6O6466PnL+s/O2JgYBzAyLfPA+X6k+rL+uXMGBgYGEXSUwklBgYGRo8xCal5NYqBgYHRK2Krd1w9wOu1OAYGxgcZkyD49s+v9DcwMDA+xbiKK0kBe43MycLAwNibkQe4PDnrtTOrARcDA+M0RrJZXkBOwL1WKAYGxgmMJJnLL+CqB82pv3wLAwPjYEYC6BW6CSBPNDEwMHZlJBtXw2i18VnNYaMqHAMDYztGITa3it7qRVt5pBUDA2NrRl7ETlLAZ6dCbp+DgYGxKaN6rPk7m4yf3j4HAwNja8akpKx2RydjZ1E6i4GBsTVjcolWPVyvLVoI0BgYGJsyqk3K6njE+ru9UbBRaoiBgfEpRr5BHrnz41bHW2+jKwYGxjGMPDnrjVBc8cov7DAwME5gVANlApj85XzgDAMDY1dGfk3fK0HXT6t+cps+YmBgHMPIxyOeLVYnySIGBsY5jEmxWj1uvlfhGg4DA2NTxlVcyaMn332s/sbAwNiIka9q6vbUEFg1YcXAwNiV0Ttij9RrHrz4pjEwMD7FmAS+Xiex9x8gqsUxMDCOZ1TL0UmcfDHgYmBgbM3IW4yFUYlx8oqBgXECIylKq03KarKYvwgMDIzTGG/nXZPrtoebmhgYGN9j/AGF6gPxIwuLnAAAAABJRU5ErkJggg==">分享</a><div class="tags"><a href="/tags/Jmeter/">Jmeter</a></div><div id="disqus_thread"><div class="btn_click_load"><button class="disqus_click_btn">阅读评论（请确保 Disqus 可以正常加载）</button></div><script type="text/javascript">var disqus_config = function () {
+    this.page.url = 'https://turbotu.github.io/2018/09/06/Jmeter常见性能指标/';
+    this.page.identifier = '2018/09/06/Jmeter常见性能指标/';
+    this.page.title = 'Jmeter常见性能指标';
+  };</script><script type="text/javascript" id="disqus-lazy-load-script">$.ajax({
+url: 'https://disqus.com/next/config.json',
+timeout: 2500,
+type: 'GET',
+success: function(){
+  var d = document;
+  var s = d.createElement('script');
+  s.src = '//drimbox.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', + new Date());
+  (d.head || d.body).appendChild(s);
+  $('.disqus_click_btn').css('display', 'none');
+},
+error: function() {
+  $('.disqus_click_btn').css('display', 'block');
+}
+});</script><script type="text/javascript" id="disqus-click-load">$('.btn_click_load').click(() => {  //click to load comments
+    (() => { // DON'T EDIT BELOW THIS LINE
+        var d = document;
+        var s = d.createElement('script');
+        s.src = '//drimbox.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', + new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+    $('.disqus_click_btn').css('display','none');
+});</script><script type="text/javascript" id="disqus-count-script">$(function() {
+     var xhr = new XMLHttpRequest();
+     xhr.open('GET', '//disqus.com/next/config.json', true);
+     xhr.timeout = 2500;
+     xhr.onreadystatechange = function () {
+       if (xhr.readyState === 4 && xhr.status === 200) {
+         $('.post-meta .post-comments-count').show();
+         var s = document.createElement('script');
+         s.id = 'dsq-count-scr';
+         s.src = 'https://drimbox.disqus.com/count.js';
+         s.async = true;
+         (document.head || document.body).appendChild(s);
+       }
+     };
+     xhr.ontimeout = function () { xhr.abort(); };
+     xhr.send(null);
+   });
+</script></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><div class="search-form"><input id="local-search-input" placeholder="Search" type="text" name="q" results="0"/><div id="local-search-result"></div></div></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/tech/">tech</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"><a href="/tags/Jmeter/" style="font-size: 15px;">Jmeter</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最近文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/09/06/Jmeter常见性能指标/">Jmeter常见性能指标</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-comment-o"> 最近评论</i></div><script type="text/javascript" src="//drimbox.disqus.com/recent_comments_widget.js?num_items=5&amp;hide_avatars=1&amp;avatar_size=32&amp;excerpt_length=20&amp;hide_mods=1"></script></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> 友情链接</i></div><ul></ul><a href="https://hexo.io/" title="Hexo" target="_blank">Hexo</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2018 <a href="/." rel="nofollow">TurboTu.</a> Powered by<a rel="nofollow" target="_blank" href="https://turbotu.github.io/"> Turbotu.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="#"> Drimbox.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=0.0.1" async></script><script type="text/javascript" src="//cdn.bootcss.com/fancybox/3.3.5/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.1" async></script><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/fancybox/3.3.5/jquery.fancybox.min.css"><script type="text/javascript" src="/js/search.js?v=0.0.1"></script><script>var search_path = 'search.xml';
+if (search_path.length == 0) {
+   search_path = 'search.xml';
+}
+var path = '/' + search_path;
+searchFunc(path, 'local-search-input', 'local-search-result');
+</script><script type="text/javascript" color="0,0,0" opacity="0.5" zIndex="-2" count="50" src="//cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.1"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.1"></script></div></body></html>
