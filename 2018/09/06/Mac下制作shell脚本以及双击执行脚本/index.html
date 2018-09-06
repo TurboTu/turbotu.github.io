@@ -1,0 +1,61 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description"><title>Mac下制作shell脚本以及双击执行脚本 | TurboTu</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.1"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/8.0.0/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/1.0.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/1.0.0/grids-responsive-min.css"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = 'https://hm.baidu.com/hm.js?' + '41fc030db57d5570dd22f78997dc4a7e';
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+  })();
+  </script></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">Mac下制作shell脚本以及双击执行脚本</h1><a id="logo" href="/.">TurboTu</a><p class="description">大道至简，徐徐图之</p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a><a href="/timeline/"><i class="fa fa-calendar"> 时间线</i></a><a href="/guestbook/"><i class="fa fa-comments"> 留言</i></a><a href="/atom.xml"><i class="fa fa-rss"> 订阅</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">Mac下制作shell脚本以及双击执行脚本</h1><div class="post-meta">Sep 6, 2018<span> | </span><span class="category"><a href="/categories/tech/">tech</a></span><span class="post-time"><span class="post-meta-item-text"> | </span><span class="post-meta-item-icon"><i class="fa fa-keyboard-o"></i><span class="post-count"> 132</span><span class="post-meta-item-text"> 字</span></span></span><span class="post-time"> | <span class="post-meta-item-icon"><i class="fa fa-hourglass-half"></i><span class="post-count"> 1</span><span class="post-meta-item-text"> 分钟</span></span></span></div><a class="disqus-comment-count" data-disqus-identifier="2018/09/06/Mac下制作shell脚本以及双击执行脚本/" href="/2018/09/06/Mac下制作shell脚本以及双击执行脚本/#disqus_thread"></a><div class="post-content"><p><strong>1、shell脚本制作</strong><br>以运行Jmeter为例，首先创建一个文本文件，命名为<code>JmeterStartup.sh</code>，打开脚本并按如下格式进行命令编写：<br>‘’ #!bin/bash<br>‘’ #author:xxx(非必填)<br>‘’ #time:xxx(非必填)<br>‘’ <strong>需要执行的命令</strong><br><img src="/2018/09/06/Mac下制作shell脚本以及双击执行脚本/DraggedImage.32f6b67c66634b19ac0e462d6d71fdb2.jpg" title="需执行命令"><br>完成后进行保存，通过<br><code>#chmod +x JmeterStartup.sh</code><br>添加执行权限，否则会提示<code>Permission Denied</code>错误。<br>再使用<br><code>./JmeterStartup.sh</code><br>即可以执行脚本。</p>
+<p><strong>2、脚本双击执行</strong><br>若需要脚本能够双击执行，则只需要将<code>JmeterStartup.sh</code>改名为<code>JmeterStartup.command</code>即可。</p>
+</div><div><ul class="post-copyright"><li class="post-copyright-author"><strong>本文作者：</strong>TurboTu</li><li class="post-copyright-link"><strong>本文链接：</strong><a href="/2018/09/06/Mac下制作shell脚本以及双击执行脚本/">https://turbotu.github.io/2018/09/06/Mac下制作shell脚本以及双击执行脚本/</a></li><li class="post-copyright-license"><strong>版权声明：</strong>copyright@TurboTu</li></ul></div><br><script type="text/javascript" src="/js/share.js?v=0.0.1" async></script><a class="article-share-link" data-url="https://turbotu.github.io/2018/09/06/Mac下制作shell脚本以及双击执行脚本/" data-id="cjlpx0ye70005e2e1owaeph4y" data-qrcode="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAADIUlEQVR42u3aQW7jQAwEQP//095rgIWNblIGrHHpFCTyyDU5UGzO4xFfz/+uV3/9+5tX67y65/1vkjUvvrCxsbFvwn6+vd5/oeSLtuvs739vwcbGxj6VnRSbT29KXmUuKHLY2NjYP8yeFZ49fvNcbGxsbOwkAEoKWB5Rze7HxsbG/mV20mzsm5N2m9pPfSRLw8bGxv56dj4V/f6fPzLfxsbGxv5i9nN9tQdo8kgoKY3D74yNjY19ELstErONaEe/CXvTPmFjY2Ofx24P6yRFK19hVg7bUfGw38LGxsa+FbsdvubFKRkbzMpSPq4oxr3Y2NjYN2TnR2TyYpNvweyrty3TI6+62NjY2DdkDz8Qh/j7MW1SPoetFDY2NvbN2ZsIfvbZvNTlpbHeVmxsbOyD2G1Mf21slDBmCdkwS8PGxsa+IbuNgdpDM7PwaBYkFcUPGxsb+yD27ODOpoXY8PLDOpsACxsbG/te7Lb8JIHOJ47mtHFVdFgHGxsb+yD2LILP8/Z8TJsMmGdVGhsbG/ts9vtb8/Co3b58tauei42NjX0eO3lM0pC0DcznRr/tmtjY2Nh3Z7dRTt4AJI/fjBxWQRg2Njb20exNDHTtoPfacQI2Njb2qewck2xE9JjFyCEvbEl8ho2NjX0GO3mVv3h3yzuvak6Kuo2NjY19K/YsfG9X2zQteSA1LMPY2NjYR7A3sFl12Gx0u9rLbcLGxsb+AXa9UNxIzLZjs+kvD+5gY2Nj35xdH3aJx8CbEGp2xKdon7CxsbEPZc9e+vf3bza9/RkbGxv7PHZ74CZvHpKCN2s/kms44sXGxsa+Ibt9rd+3EG3JTO6vjdjY2NgHsffD3XZwO1v5qoE0NjY29nnsZ3nlQf9sZJuXw1WDhI2NjX0QO78SfN425Fsw2+hNwcPGxsa+I3tWtDZR/n5c0RYqbGxs7F9gbwpDPhhoxwntMKCIrrCxsbF/kt2+9M9Gtu2Yuf0HYGNjY/8yu32T348BkgZjWPCwsbGxj2PnodKswMzGD7M1o89iY2NjH8Su45i4CgyD+/iJ7VbuUihsbGzsL2T/A1QQtanVh2peAAAAAElFTkSuQmCC">分享</a><div class="tags"><a href="/tags/Mac/">Mac</a></div><div class="post-nav"><a class="next" href="/2018/09/06/CentOS7安装Chrome/">CentOS7安装Chrome</a></div><div id="disqus_thread"><div class="btn_click_load"><button class="disqus_click_btn">阅读评论（请确保 Disqus 可以正常加载）</button></div><script type="text/javascript">var disqus_config = function () {
+    this.page.url = 'https://turbotu.github.io/2018/09/06/Mac下制作shell脚本以及双击执行脚本/';
+    this.page.identifier = '2018/09/06/Mac下制作shell脚本以及双击执行脚本/';
+    this.page.title = 'Mac下制作shell脚本以及双击执行脚本';
+  };</script><script type="text/javascript" id="disqus-lazy-load-script">$.ajax({
+url: 'https://disqus.com/next/config.json',
+timeout: 2500,
+type: 'GET',
+success: function(){
+  var d = document;
+  var s = d.createElement('script');
+  s.src = '//drimbox.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', + new Date());
+  (d.head || d.body).appendChild(s);
+  $('.disqus_click_btn').css('display', 'none');
+},
+error: function() {
+  $('.disqus_click_btn').css('display', 'block');
+}
+});</script><script type="text/javascript" id="disqus-click-load">$('.btn_click_load').click(() => {  //click to load comments
+    (() => { // DON'T EDIT BELOW THIS LINE
+        var d = document;
+        var s = d.createElement('script');
+        s.src = '//drimbox.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', + new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+    $('.disqus_click_btn').css('display','none');
+});</script><script type="text/javascript" id="disqus-count-script">$(function() {
+     var xhr = new XMLHttpRequest();
+     xhr.open('GET', '//disqus.com/next/config.json', true);
+     xhr.timeout = 2500;
+     xhr.onreadystatechange = function () {
+       if (xhr.readyState === 4 && xhr.status === 200) {
+         $('.post-meta .post-comments-count').show();
+         var s = document.createElement('script');
+         s.id = 'dsq-count-scr';
+         s.src = 'https://drimbox.disqus.com/count.js';
+         s.async = true;
+         (document.head || document.body).appendChild(s);
+       }
+     };
+     xhr.ontimeout = function () { xhr.abort(); };
+     xhr.send(null);
+   });
+</script></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><div class="search-form"><input id="local-search-input" placeholder="Search" type="text" name="q" results="0"/><div id="local-search-result"></div></div></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/tech/">tech</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"><a href="/tags/CentOS/" style="font-size: 15px;">CentOS</a> <a href="/tags/Jmeter/" style="font-size: 15px;">Jmeter</a> <a href="/tags/测试/" style="font-size: 15px;">测试</a> <a href="/tags/Mac/" style="font-size: 15px;">Mac</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最近文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/09/06/Mac下制作shell脚本以及双击执行脚本/">Mac下制作shell脚本以及双击执行脚本</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/06/CentOS7安装Chrome/">CentOS7安装Chrome</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/06/Jmeter常见性能指标/">Jmeter常见性能指标</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-comment-o"> 最近评论</i></div><script type="text/javascript" src="//drimbox.disqus.com/recent_comments_widget.js?num_items=5&amp;hide_avatars=1&amp;avatar_size=32&amp;excerpt_length=20&amp;hide_mods=1"></script></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> 友情链接</i></div><ul></ul><a href="https://hexo.io/" title="Hexo" target="_blank">Hexo</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2018 <a href="/." rel="nofollow">TurboTu.</a> Powered by<a rel="nofollow" target="_blank" href="https://turbotu.github.io/"> Turbotu.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="#"> Drimbox.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=0.0.1" async></script><script type="text/javascript" src="//cdn.bootcss.com/fancybox/3.3.5/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.1" async></script><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/fancybox/3.3.5/jquery.fancybox.min.css"><script type="text/javascript" src="/js/search.js?v=0.0.1"></script><script>var search_path = 'search.xml';
+if (search_path.length == 0) {
+   search_path = 'search.xml';
+}
+var path = '/' + search_path;
+searchFunc(path, 'local-search-input', 'local-search-result');
+</script><script type="text/javascript" color="0,0,0" opacity="0.5" zIndex="-2" count="50" src="//cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.1"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.1"></script></div></body></html>
