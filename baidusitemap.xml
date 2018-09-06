@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+
+    
+  <url>
+    <loc>https://turbotu.github.io/2018/09/06/Jmeter%E8%BF%9C%E7%A8%8B%E6%80%A7%E8%83%BD%E7%9B%91%E6%8E%A7PerfMon/</loc>
+    <lastmod>2018-09-06T05:49:13.810Z</lastmod>
+    <data>
+        <display>
+        <title>Jmeter远程性能监控PerfMon以及PerfMonServerAgent安装</title>
+        <pubTime>2018-09-06T05:23:00.000Z</pubTime>
+        
+        <tag>Jmeter</tag>
+         
+        <tag>测试</tag>
+         
+         
+           
+             
+              <breadCrumb title="tech" url="https://turbotu.github.io/categories/tech/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+  <url>
+    <loc>https://turbotu.github.io/2018/09/06/Mac%E4%B8%8B%E5%88%B6%E4%BD%9Cshell%E8%84%9A%E6%9C%AC%E4%BB%A5%E5%8F%8A%E5%8F%8C%E5%87%BB%E6%89%A7%E8%A1%8C%E8%84%9A%E6%9C%AC/</loc>
+    <lastmod>2018-09-06T01:50:35.761Z</lastmod>
+    <data>
+        <display>
+        <title>Mac下制作shell脚本以及双击执行脚本</title>
+        <pubTime>2018-09-05T17:21:14.000Z</pubTime>
+        
+        <tag>Mac</tag>
+         
+         
+           
+             
+              <breadCrumb title="tech" url="https://turbotu.github.io/categories/tech/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://turbotu.github.io/2018/09/06/CentOS7%E5%AE%89%E8%A3%85Chrome/</loc>
+    <lastmod>2018-09-05T17:19:26.493Z</lastmod>
+    <data>
+        <display>
+        <title>CentOS7安装Chrome</title>
+        <pubTime>2018-09-05T17:03:55.000Z</pubTime>
+        
+        <tag>CentOS</tag>
+         
+         
+           
+             
+              <breadCrumb title="tech" url="https://turbotu.github.io/categories/tech/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://turbotu.github.io/2018/09/06/Jmeter%E5%B8%B8%E8%A7%81%E6%80%A7%E8%83%BD%E6%8C%87%E6%A0%87/</loc>
+    <lastmod>2018-09-05T17:00:18.022Z</lastmod>
+    <data>
+        <display>
+        <title>Jmeter常见性能指标</title>
+        <pubTime>2018-09-05T16:25:12.000Z</pubTime>
+        
+        <tag>Jmeter</tag>
+         
+        <tag>测试</tag>
+         
+         
+           
+             
+              <breadCrumb title="tech" url="https://turbotu.github.io/categories/tech/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+</urlset>

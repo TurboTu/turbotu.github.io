@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>TurboTu</title>
+  
+  <subtitle>大道至简，徐徐图之</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://turbotu.github.io/"/>
+  <updated>2018-09-06T05:49:13.810Z</updated>
+  <id>https://turbotu.github.io/</id>
+  
+  <author>
+    <name>TurboTu</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Jmeter远程性能监控PerfMon以及PerfMonServerAgent安装</title>
+    <link href="https://turbotu.github.io/2018/09/06/Jmeter%E8%BF%9C%E7%A8%8B%E6%80%A7%E8%83%BD%E7%9B%91%E6%8E%A7PerfMon/"/>
+    <id>https://turbotu.github.io/2018/09/06/Jmeter远程性能监控PerfMon/</id>
+    <published>2018-09-06T05:23:00.000Z</published>
+    <updated>2018-09-06T05:49:13.810Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="1-安装PerfMon"><a href="#1-安装PerfMon" class="headerlink" title="1.安装PerfMon"></a>1.安装PerfMon</h3><p>先打开PluginManager<br><img src="/2018/09/06/Jmeter远程性能监控PerfMon/DraggedImage.1898af0870f740e6b62869df19f31614.jpg"><br><a id="more"></a><br>搜索<code>perfmon</code><br><img src="/2018/09/06/Jmeter远程性能监控PerfMon/DraggedImage.43c5097162cb479a99cb7575012e4679.jpg"><br>点击方框<br><img src="/2018/09/06/Jmeter远程性能监控PerfMon/DraggedImage.3a067d7561cd4c88bec9b0d771ecfd42.jpg"><br>应用选择即可<br><img src="/2018/09/06/Jmeter远程性能监控PerfMon/DraggedImage.5a73428bfd9946b38dcfb7d239ba9433.jpg"><br>重启后可以在如下位置找到<br><img src="/2018/09/06/Jmeter远程性能监控PerfMon/DraggedImage.d012503aa0a04fbe81514a599eb159d9.jpg"></p><h3 id="2-PerfMon-Server-Agent安装"><a href="#2-PerfMon-Server-Agent安装" class="headerlink" title="2.PerfMon Server Agent安装"></a>2.PerfMon Server Agent安装</h3><p>PerfMon Server Agent需要安装在受监控的服务器上，首先下载<a href="https://github.com/undera/perfmon-agent" target="_blank" rel="noopener">安装包</a><br><img src="/2018/09/06/Jmeter远程性能监控PerfMon/DraggedImage.d012503aa0a04fbe81514a599eb159d9.jpg"><br>解压后根据操作系统选择运行<code>startAgent.bat</code>或<code>startAgent.sh</code>即可</p><h3 id="3-配置"><a href="#3-配置" class="headerlink" title="3.配置"></a>3.配置</h3><p>添加<code>jp@gc - PerfMon Metrics Collector</code>后如下图配置<br><img src="/2018/09/06/Jmeter远程性能监控PerfMon/DraggedImage.8407e388a03b44e685b461921abb7395.jpg"><br>启动测试<br><img src="/2018/09/06/Jmeter远程性能监控PerfMon/DraggedImage.57a912f0b6e34d3cb2698639ae02c4f0.jpg"></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;1-安装PerfMon&quot;&gt;&lt;a href=&quot;#1-安装PerfMon&quot; class=&quot;headerlink&quot; title=&quot;1.安装PerfMon&quot;&gt;&lt;/a&gt;1.安装PerfMon&lt;/h3&gt;&lt;p&gt;先打开PluginManager&lt;br&gt;&lt;img src=&quot;/2018/09/06/Jmeter远程性能监控PerfMon/DraggedImage.1898af0870f740e6b62869df19f31614.jpg&quot;&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="tech" scheme="https://turbotu.github.io/categories/tech/"/>
+    
+    
+      <category term="Jmeter" scheme="https://turbotu.github.io/tags/Jmeter/"/>
+    
+      <category term="测试" scheme="https://turbotu.github.io/tags/%E6%B5%8B%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Mac下制作shell脚本以及双击执行脚本</title>
+    <link href="https://turbotu.github.io/2018/09/06/Mac%E4%B8%8B%E5%88%B6%E4%BD%9Cshell%E8%84%9A%E6%9C%AC%E4%BB%A5%E5%8F%8A%E5%8F%8C%E5%87%BB%E6%89%A7%E8%A1%8C%E8%84%9A%E6%9C%AC/"/>
+    <id>https://turbotu.github.io/2018/09/06/Mac下制作shell脚本以及双击执行脚本/</id>
+    <published>2018-09-05T17:21:14.000Z</published>
+    <updated>2018-09-06T01:50:35.761Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>1、shell脚本制作</strong><br>以运行Jmeter为例，首先创建一个文本文件，命名为<code>JmeterStartup.sh</code>，打开脚本并按如下格式进行命令编写：<br>‘’ #!bin/bash<br>‘’ #author:xxx(非必填)<br>‘’ #time:xxx(非必填)<br>‘’ <strong>需要执行的命令</strong><br><img src="/2018/09/06/Mac下制作shell脚本以及双击执行脚本/DraggedImage.32f6b67c66634b19ac0e462d6d71fdb2.jpg" title="需执行命令"><br>完成后进行保存，通过<br><code>#chmod +x JmeterStartup.sh</code><br>添加执行权限，否则会提示<code>Permission Denied</code>错误。<br>再使用<br><code>./JmeterStartup.sh</code><br>即可以执行脚本。</p><p><strong>2、脚本双击执行</strong><br>若需要脚本能够双击执行，则只需要将<code>JmeterStartup.sh</code>改名为<code>JmeterStartup.command</code>即可。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;strong&gt;1、shell脚本制作&lt;/strong&gt;&lt;br&gt;以运行Jmeter为例，首先创建一个文本文件，命名为&lt;code&gt;JmeterStartup.sh&lt;/code&gt;，打开脚本并按如下格式进行命令编写：&lt;br&gt;‘’ #!bin/bash&lt;br&gt;‘’ #author:
+      
+    
+    </summary>
+    
+      <category term="tech" scheme="https://turbotu.github.io/categories/tech/"/>
+    
+    
+      <category term="Mac" scheme="https://turbotu.github.io/tags/Mac/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CentOS7安装Chrome</title>
+    <link href="https://turbotu.github.io/2018/09/06/CentOS7%E5%AE%89%E8%A3%85Chrome/"/>
+    <id>https://turbotu.github.io/2018/09/06/CentOS7安装Chrome/</id>
+    <published>2018-09-05T17:03:55.000Z</published>
+    <updated>2018-09-05T17:19:26.493Z</updated>
+    
+    <content type="html"><![CDATA[<p>CentOS7下很多地方只能安装Chromium，但是Chromium对Flash的支持不是很好，所以使用非常不方便，目前采用了很多方法也无法在Chromium下正常使用Flash。所以经过摸索，找到了一种安装Chrome的方法。</p><p><strong>1、下载Chrome浏览器安装包</strong><br>使用rpm安装包，<a href="https://www.chrome64bit.com/index.php/google-chrome-64-bit-for-linux" target="_blank" rel="noopener">chrome.rpm</a>。</p><p><strong>2、下载的安装包使用rpm命令进行安装</strong><br><code>$rpm -ivh xxx.rpm</code><br>安装过程可能会提示依赖检测失败，需要<code>/usr/bin/lsb_release</code>。遇到这种情况需要安装redhat-lsb依赖，使用如下命令：<br><code>#yum -y install redhat-lsb</code><br>完成此步骤后有可能还会提示缺少<code>libappindicator3.so.1</code>，使用如下命令安装依赖包：<br><code>#yum install libappindicator-gtk3</code><br>完成此依赖安装后重新执行rpm安装命令，就可以在系统中看到Chrome浏览器。<br>Chrome本身集成了Flash插件，可以直接使用一个需要Flash的网页进行触发安装。<br><img src="/2018/09/06/CentOS7安装Chrome/avatar.jpg" title="avatar.jpg"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;CentOS7下很多地方只能安装Chromium，但是Chromium对Flash的支持不是很好，所以使用非常不方便，目前采用了很多方法也无法在Chromium下正常使用Flash。所以经过摸索，找到了一种安装Chrome的方法。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1、下载Ch
+      
+    
+    </summary>
+    
+      <category term="tech" scheme="https://turbotu.github.io/categories/tech/"/>
+    
+    
+      <category term="CentOS" scheme="https://turbotu.github.io/tags/CentOS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Jmeter常见性能指标</title>
+    <link href="https://turbotu.github.io/2018/09/06/Jmeter%E5%B8%B8%E8%A7%81%E6%80%A7%E8%83%BD%E6%8C%87%E6%A0%87/"/>
+    <id>https://turbotu.github.io/2018/09/06/Jmeter常见性能指标/</id>
+    <published>2018-09-05T16:25:12.000Z</published>
+    <updated>2018-09-05T17:00:18.022Z</updated>
+    
+    <content type="html"><![CDATA[<p>在实际工作中我们经常会对两种架构的软件进行测试：B/S和C/S，它们关注的指标有哪些区别？</p><p><strong>1、对于B/S架构的软件，一般会关注如下Web服务器性能指标：</strong></p><ul><li>Avg Rps：平均每秒钟的响应次数=总请求次数/秒数；</li><li>Avg time to last byte per terstion （mstes）:平均每秒业务脚本的迭代次数；</li><li>Successful Hits：成功的点击次数；</li><li>Failed Hits：失败的点击次数；</li><li>Hits Per Second：每秒点击次数；</li><li>Successful Hits Per Second：每秒成功的点击次数；</li><li>Failed Hits Per Second：每秒失败的点击次数；</li><li>Attempted Connections：尝试连接数；</li><li>Throughput：吞吐率；</li></ul><p><strong>2、对于C/S架构的程序，由于软件后台通常为数据库，所以我们更注重数据库的测试指标。</strong></p><ul><li>User Connections：用户连接数，也就是数据库的连接数量；</li><li>Number of Deadlocks：数据库死锁；</li><li>Butter Cache Hit：数据库Cache的命中情况。</li></ul><p><em>注：在实际性能测试过程中，需要观察的性能指标并不限于以上提到的这些指标，需要根据实际情况作出选择和权衡，有些指标如CPU占用率、内存占用率、数据库连接池等，也有非常重要的参考意义。</em></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;在实际工作中我们经常会对两种架构的软件进行测试：B/S和C/S，它们关注的指标有哪些区别？&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1、对于B/S架构的软件，一般会关注如下Web服务器性能指标：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Avg Rps：平均每秒钟的响应次数=总请求
+      
+    
+    </summary>
+    
+      <category term="tech" scheme="https://turbotu.github.io/categories/tech/"/>
+    
+    
+      <category term="Jmeter" scheme="https://turbotu.github.io/tags/Jmeter/"/>
+    
+      <category term="测试" scheme="https://turbotu.github.io/tags/%E6%B5%8B%E8%AF%95/"/>
+    
+  </entry>
+  
+</feed>
