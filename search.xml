@@ -3,6 +3,27 @@
   
     
     <entry>
+      <title>CentOS7安装Chrome</title>
+      <link href="/2018/09/06/CentOS7%E5%AE%89%E8%A3%85Chrome/"/>
+      <url>/2018/09/06/CentOS7%E5%AE%89%E8%A3%85Chrome/</url>
+      <content type="html"><![CDATA[<p>CentOS7下很多地方只能安装Chromium，但是Chromium对Flash的支持不是很好，所以使用非常不方便，目前采用了很多方法也无法在Chromium下正常使用Flash。所以经过摸索，找到了一种安装Chrome的方法。</p><p><strong>1、下载Chrome浏览器安装包</strong><br>使用rpm安装包，<a href="https://www.chrome64bit.com/index.php/google-chrome-64-bit-for-linux" target="_blank" rel="noopener">chrome.rpm</a>。</p><p><strong>2、下载的安装包使用rpm命令进行安装</strong><br><code>$rpm -ivh xxx.rpm</code><br>安装过程可能会提示依赖检测失败，需要<code>/usr/bin/lsb_release</code>。遇到这种情况需要安装redhat-lsb依赖，使用如下命令：<br><code>#yum -y install redhat-lsb</code><br>完成此步骤后有可能还会提示缺少<code>libappindicator3.so.1</code>，使用如下命令安装依赖包：<br><code>#yum install libappindicator-gtk3</code><br>完成此依赖安装后重新执行rpm安装命令，就可以在系统中看到Chrome浏览器。<br>Chrome本身集成了Flash插件，可以直接使用一个需要Flash的网页进行触发安装。<br><img src="/2018/09/06/CentOS7安装Chrome/avatar.jpg" title="avatar.jpg"></p>]]></content>
+      
+      <categories>
+          
+          <category> tech </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CentOS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>Jmeter常见性能指标</title>
       <link href="/2018/09/06/Jmeter%E5%B8%B8%E8%A7%81%E6%80%A7%E8%83%BD%E6%8C%87%E6%A0%87/"/>
       <url>/2018/09/06/Jmeter%E5%B8%B8%E8%A7%81%E6%80%A7%E8%83%BD%E6%8C%87%E6%A0%87/</url>
@@ -18,6 +39,8 @@
         <tags>
             
             <tag> Jmeter </tag>
+            
+            <tag> 测试 </tag>
             
         </tags>
       
